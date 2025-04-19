@@ -11,13 +11,15 @@ def parse_log(file_path):
         loss = []
 
         for row in reader:
-                tput = float(row[1])  # Throughput (Mbps)
-                delay = float(row[2])  # RTT (ms)
-                loss_rate = float(row[4])  # Loss rate
-                throughput.append(tput)
-                rtt.append(delay)
-                loss.append(loss_rate)
-
+		try:
+	         tput = float(row[0])  # Throughput (Mbps)
+       	       	 delay = float(row[1])  # RTT (ms)
+               	 loss_rate = float(row[2])  # Loss rate
+               	 throughput.append(tput)
+               	 rtt.append(delay)
+               	 loss.append(loss_rate)
+		except ValueError:
+               	 continue
 	if throughput:
 	   	tput_avg = sum(throughput)/len(throughput)
 	else:

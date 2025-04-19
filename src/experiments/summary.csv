@@ -1,0 +1,7 @@
+Protocol,Profile,Avg Throughput (Mbps),Avg RTT (ms),Avg Loss Rate
+bbr,profile1,0,0,0
+bbr,profile2,0,0,0
+fillp,profile1,0,0,0
+fillp,profile2,0,0,0
+scream,profile1,0,0,0
+scream,profile2,0,0,0
