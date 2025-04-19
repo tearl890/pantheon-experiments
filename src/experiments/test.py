@@ -340,6 +340,7 @@ class Test(object):
 
     def run_tunnel_client(self, tun_id, tc_manager, cmd_to_run_tc):
         if self.mode == 'local':
+	    print("fix", cmd_to_run_tc)
             cmd_to_run_tc[1] = '$MAHIMAHI_BASE'
         else:
             if self.server_side == 'remote':

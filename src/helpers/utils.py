@@ -37,7 +37,7 @@ make_sure_dir_exists(tmp_dir)
 
 def parse_config():
     with open(path.join(context.src_dir, 'config.yml')) as config:
-        return yaml.load(config)
+        return yaml.load(config, Loader=yaml.FullLoader)
 
 
 def update_submodules():
