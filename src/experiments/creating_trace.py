@@ -11,7 +11,7 @@ def generate_trace(rate_mbps, duration_secs, outfile):
 
     with open(outfile, 'w') as f:
         while current_time < end_time:
-            f.write('%.3f\n' % current_time)
+            f.write('%d\n' % int(current_time))
             current_time += interval_ms
 
 if __name__ == '__main__':
